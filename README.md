@@ -25,3 +25,23 @@ Once the base comments for each category have been generated, each intra-categor
 Once each intra-category comments dataset is generated, it will undergo PerspectiveAPI’s scoring to yield the respective toxicity score for each comment. Thereafter the Min, Max, and Mean toxicity scores among the 3 classifications i.e. Positive, Negative, and Neutral across all intra-categories will be calculated and from there the results will be analysed to determine any potential biases in the algorithm. For the analysis, the fairness metric used will be Individual Fairness, where this metric is concerned with similar treatments to similar individuals or groups.
 
 ## Results and Analysis
+The following conclusions are derived from the charts and tables in sections 3.1, 3.2, and 4.1 of the notebook. 
+### Category: Disability
+- Mental Illness and Intellectual Disability elicited the highest toxicity scores relative to Physical Disability
+- PerspectiveAPI likely more bias towards such groups based on Individual Fairness since toxicity difference was >= 0.1 when they were paired with other disability groups. 
+
+### Category: Gender
+- Transgender and Queer elicited the highest toxicity scores relative to Male, with Female just trailing behind behind the 2
+- PerspectiveAPI likely more bias towards such groups based on Individual Fairness since difference was >= 0.1 when they were paired with other genders.
+
+### Category: Race
+- White and Black elicited the highest toxicity scores relative to other races
+- PerspectiveAPI likely more bias towards such groups based on Individual Fairness since difference was >= 0.1 when they were paired with other races.
+
+### Category: Religion
+- Islam and Judaism elicited the highest toxicity scores relative to other religons, 
+- PerspectiveAPI likely more bias towards Judaism based on Individual Fairness since difference was >= 0.1 when paired with other religions. However, Islam trails just slightly behind Judaism for this. 
+
+### Category: Sexual Orientation
+- Gay and Lesbian elicited the highest toxicity scores relative to other sexual orientations, while heterosexuals yielded the lowest score
+- PerspectiveAPI likely NOT bias towards any SO groups based on Individual Fairness since difference was <= 0.1 across all pairings. Yet, looking at the absolute difference figures, Gay and Lesbian again yielded the highest difference scores when paired with the other sub-categories
