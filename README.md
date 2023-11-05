@@ -16,3 +16,5 @@ Once the base comments for each category have been generated, each intra-categor
 
 ### iii. Toxicity Scoring
 Once each intra-category comments dataset is generated, it will undergo PerspectiveAPI’s scoring to yield the respective toxicity score for each comment. Thereafter the Min, Max, and Mean toxicity scores among the 3 classifications i.e. Positive, Negative, and Neutral across all intra-categories will be calculated and from there the results will be analysed to determine any potential biases in the algorithm. For the analysis, the fairness metric used will be Individual Fairness, where this metric is concerned with similar treatments to similar individuals or groups.
+
+## Results and Analysis
